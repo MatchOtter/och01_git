@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포항</title>
+    <link rel="stylesheet" href="css/Pohang.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jquery는 js 스크립트보다위에 -->
+    <script src="javascript/Pohang.js"></script>
+    <script src="https://kit.fontawesome.com/a20e1141c1.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="title">
+        포항입니다
+    </div>
+
+    <!-- section_func() js==1,2,3,4, 연결 될때마다 보이게하기 -->
+    <script> //자바 스크립트가 동작하게 하는 태그
+        function section_func(js) { 
+            smallImg5.style.display="none";
+            sec0.style.display="none";
+            sec1.style.display="none";
+            sec2.style.display="none";
+            sec3.style.display="none";
+            sec4.style.display="none";
+            sec5.style.display="none";
+            sec6.style.display="none";
+
+            if(js == 0) {
+                sec0.style.display="flex";
+                smallImg5.style.display="flex";
+            }
+            else if(js == 1) {
+                // 경제 메뉴 지하철 동영상
+                sec1.style.display="block";
+                sec1Mp4.style.display="block";
+            }            
+            else if(js == 2) {
+                // 문화메뉴
+                sec2.style.display="block";
+            }            
+            else if(js == 3) {
+                // 스포츠 메뉴
+                sec3.style.display="block";
+            }            
+            else if(js == 4) {
+                // 모임 메뉴
+                sec4.style.display="block";
+            }            
+            else if(js == 5){
+            //  갤러리 메뉴
+                sec5.style.display="block";
+            }
+            else if(js == 6){
+            //  효성 메뉴
+                sec6.style.display="block";
+            }   
+        }
+    </script>
+
+
+
+    <div class="wrap" id="wrap1"><!--1레벨 wrap, body 바로 아래, 생략 가능 -->
+        <nav>                    <!--2레벨 nav -->
+            <div><p onclick="section_func(0)">홈으로</p></div> <!--클릭하면 section_func 자바스크립트랑 연결-->
+            <div><p onclick="section_func(1)">경제</p></div>
+            <div><p onclick="section_func(2)">문화</p></div>
+            <div><p onclick="section_func(3)">도움말</p> </div>
+            <div><p onclick="section_func(4)">모임</p></div>
+            <div><p onclick="section_func(5)">갤러리</p></div>
+            <div><p onclick="section_func(6)">효성</p></div>
+        </nav>
+
+        <!-- 섹션 6 ---------------------------------->
+         <section id="sec6">
+            <p class="sec6_title">
+                효성 화면
+            </p>
+            <div class="sec6_box1">
+                <div>
+                    <div class="sec6_box1_img"></div>
+                    <div class="sec6_box1_child">
+                        <p>맛있는 커피</p>
+                        <p>가격이 싸요</p>
+                        <p>언제나 환영</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- 섹션 5   ----------------------- -->    
+         <section id="sec5"><!--갤러리-->
+            <div class="sec5_title">
+                갤러리 화면
+            </div>
+            <ul class="sec5Box">
+                <li><div class="sec5Box_text">
+
+                </div></li>
+                <li><div class="sec5Box_text">
+
+                </div></li>
+                <li><div class="sec5Box_text">
+
+                </div></li>
+                <li><div class="sec5Box_text">
+
+                </div></li>
+                <li><div class="sec5Box_text">
+
+                </div></li>
+                
+            </ul>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section id="sec1">
+            <div class="sec1Bg bg"id="sec1Mp4">
+                <video  muted controls loop>
+                <!-- 비디오 autoplay:자동재생,  muted:초기에 음소거, controls:컨트롤러 생성, loop: 재생무한, -->
+                    <source src="video/hyundai.mp4">
+                </video>
+                <p class="sec1Bg_skip"
+                onclick="sec1Mp4.style.display='none';">
+                Skip  <!--스킵버튼 누르면 동영상 div(id="sec1Mp4")안보이게-->
+                </p>
+            </div>
+            <p>경제 화면으로 돌아왔어요</p>
+        </section>
+
+
+        <section id="sec2"><!--문화-->
+            <div class="sec2_title">
+                문화 화면
+            </div>
+            <div class="sec2Big">
+                <ul class="big_img5">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+            <ul class="btn">
+                <li class="sec2Big_prev"><i class="fa-solid fa-angles-left"></i></li>
+                <li class="sec2Big_next"><i class="fa-solid fa-angles-right"></i></li>
+            </ul>
+            <ul class="sec2Box1">
+                <li>
+                    <div>한결같되</div>
+                    <div>날로 새롭게</div>
+                    <p>2000년부터 지금까지</p>
+                    <p>꾸준하게 나은 세상을</p>
+                    <p>만들었어요</p>
+                    <p>자세히 알아보기</p>
+                </li>
+                <li>
+                    <div class="sec2right"><img src="img/book0.avif" alt=""></div>
+                    <div class="sec2right"><img src="img/book1.avif" alt=""></div>
+                    <div class="sec2right"><img src="img/book2.jpeg" alt=""></div>
+                </li>
+            </ul>
+
+        </section>
+
+
+
+
+        <section id="sec3"><!--스포츠-->
+            <div class="sec3_title">
+                스포츠 화면
+            </div>
+        </section>
+
+        <section id="sec4"><!--모임-->
+            <div class="sec4_title">
+                모임 화면
+            </div>
+        </section>
+
+
+
+         <!-----------------초기화면에 보여지는 Section ------------------------->
+         <section class="sec"id="sec0"><!--2레벨 자식-->
+
+            <div class="box1"> 
+        <!-- box1에 있는 코드 자바 스크립트로 개인적으로 옮겨둠 onmouseover="bus.style.display='none'"onmouseout="bus.style.display='block'"-------------------------------------------------------------- -->
+            <!--마우스 올리면 교통안내 div 안보이게, 마우스 내리면 교통안내 div 보이게  --> 
+    
+
+                <p>갤러리</p>
+                <div class="gallery box"id="gallery">
+              <!-- 그냥 띄어쓰기하면 클래스를 두개 이상가질수있다 -->
+                    <div class="big">
+                        <ul class="img5">
+                            <li><div>호미곶해맞이광장</div></li>
+                            <li><div>오어사</div></li>
+                            <li><div>이가리 닻 전망대</div></li>
+                            <li><div>경상북도수목원</div></li>
+                            <li><div>영일대 해상누각</div></li>
+                            <li><div>호미곶해맞이광장</div></li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+            
+
+            <div class="box2">
+                <p>교통안내</p>
+                <div class="bus box"id="bus">
+                     <!-- 그냥 띄어쓰기하면 클래스를 두개 이상가질수있다 -->
+                     
+                     <div class="box2Title">
+                        <small>편리한 교통</small>  <!-- small 태그는 글자 크기가 작은 텍스트를 정의할 때 사용합니다.-->
+                        <small class="smallDown">김포공항에서 비행기로 한시간 거리!!</small>
+                     </div>   
+
+                     <!-- <div class="both">
+                            <div>1</div>
+                            <div>2</div>
+                            <p class="one"></p>동그라미
+                        </div> -->
+
+                        <div class="box2Img5">
+                            <ul>
+                                <li>
+                                    <img src="img/KTX1.jpg" alt="">
+                                </li>
+                                <li>KTX</li>
+                                <li>예상 비용 : 55,000원  이상</li>
+                                <li>소요시간 : 2시간 30분 정도</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="img/고속버스1.avif" alt="">
+                                </li>
+                                <li>고속 버스</li>
+                                <li>예상 비용 : 30,000원  이상</li>
+                                <li>소요시간 : 3시간 40분 정도</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="img/비행기.webp" alt="">
+                                </li>
+                                <li>비행기</li>
+                                <li>예상 비용 : 50,000원  이상</li>
+                                <li>소요시간 : 1시간 정도</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="img/자동차.jpg" alt="">
+                                </li>
+                                <li>자차</li>
+                                <li>예상 비용 :   통행료와 차량 유류비</li>
+                                <li>소요시간 : 3시간 30분 정도</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="img/자전거1.avif" alt="">
+                                </li>
+                                <li>자전거</li>
+                                <li>가격 : 딱히없음</li>
+                                <li>소요시간 : 도착하는 대로</li>
+                            </ul>
+                            
+
+                        </div>
+                </div>
+            </div>
+
+
+            <ul class="smallImg5" id="smallImg5">
+                <li onclick="func('img1.jfif');"><img src="img/img1.jfif" alt=""></li>
+                <li onclick="func('img2.jfif');"><img src="img/img2.jfif" alt=""></li>
+                <li onclick="func('img3.jfif');"><img src="img/img3.jfif" alt=""></li>
+                <li onclick="func('img4.jfif');"><img src="img/img4.jfif" alt=""></li>
+                <li onclick="func('img5.webp');"><img src="img/img5.webp" alt=""></li>
+            </ul>
+         </section>   <!-- nav, sec이랑 형제 태그-->
+    </div>
+
+
+
+    <div id="full">
+        <p id="fullClose"
+           onclick="full.style.display='none'">
+           X
+        </p>
+        <div class="fullImg">
+            <img src="img/img10.avif" alt=""name="fullPic">
+            <!-- 자바스크립트에서만 사용가능한 name
+            id를 써도 되지만 보여주기위해 써봤다.  -->
+        </div>
+
+    </div>
+    <script>
+        function func(js){
+            console.log (js); 
+            full.style.display="block";
+            fullPic.src="img/"+js;
+
+            // 위에서 func()안의 있는 글자들이 js로 전달 된다.
+            // img/ + img1.jfif 가 되어서 클릭하면 
+            //fullImg에서 img10이 나오는 대신에 각각 클릭한 그림이 나오게된다.
+        }
+    </script>
+
+
+
+
+</body>
+</html>
+
+
