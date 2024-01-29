@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk(){
+		if(!frm.num.value){
+			alert("숫자입력");
+			frm.num.focus();
+			return false;
+		}
+		if(isNaN(frm.num.value)){
+			alert("숫자가 아니라 NaN");
+			frm.num.focus();
+			frm.num.value="";  //입력된글자 지우기
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+<h1>숫자를 입력하세요</h1>
+<form action="Add3" name="frm" onsubmit="return chk()" method="get">
+	
+	숫자 : <input type="text" name="num"><p>
+	위치 : <input type="text" name="loc"><p>
+		<input type="submit" value="확인">	
+	</form>
+</body>
+</html>
